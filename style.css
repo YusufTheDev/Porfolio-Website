@@ -1,0 +1,115 @@
+/* General styles */
+*{
+    color: #e0e1dd;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+}
+
+
+/* Header styles */
+#header {
+    background: #0d1b2a;
+    height: 20%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    font-size: 30px;
+}
+/* Navbar styles */
+#navbar {
+    background: #1b263b;
+    display: flex;
+}
+
+.navlink {
+    font-weight: bold;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    width: 25%;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+/* Content styles */
+#content {
+    background: #415a77;
+    padding: 20px;
+}
+
+#intro {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 5%;
+}
+
+#introimg {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end; 
+}
+
+#introimg img {
+    width: 75%; 
+}
+
+#introtext {
+    font-size: 25px;
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+}
+
+#extrainfo{
+    text-align: center;
+    font-size: 20px;
+}
+
+.link{
+    background-color: #0c112a;
+    font-weight: bold;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    width: 25%;
+    text-align: center;
+    text-decoration: none;
+}
+/* Footer styles */
+#footer {
+    text-align: center;
+    padding: 10px;
+    background: #778da9;
+    height: 10%;
+}
+
+/* Media Queries */
+@media (max-width: 800px){
+    .navlink{
+        font-size: 15px;
+    }
+    #intro{
+        flex-direction: column;
+    }
+    #introtext{
+        font-size:20px;
+        width:80%;
+    }
+    #introimg{
+        justify-content: center;
+    }
+    .link{
+        width:5%;
+    }
+}
+
+
