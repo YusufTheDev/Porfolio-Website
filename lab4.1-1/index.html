@@ -1,0 +1,66 @@
+<!doctype html>
+<!--
+Yusuf Khan
+This web page is my main page for my portfolio website for McMaster COMPSCI - 1XD3
+-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lab 4.1</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="navbar">
+            <a class="navlink" href="../index.html">Home</a>
+            <a class="navlink" href="../about.html">About Me</a>
+            <a class="navlink" href="../work.html">My Work</a>
+            <a class="navlink" href="../journal.html">My Journal</a>
+        </div>
+        <div class="header">
+            <h1>Lab 4.1 Part 1</h1>
+        </div>
+        <div id="content">
+            <div class="fullscreentile">
+                <div class="infotile">
+                    <div class="infotext">
+                        <h2>This web page hosts a simple quiz app using javascript prompts!</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">&copy;Yusuf Khan, McMaster University, 2025</div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", startq);
+
+        function startq() {
+            let int1 = Math.floor(Math.random() * 201) - 100;
+            let int2 = Math.floor(Math.random() * 201) - 100;
+            let correctAnswer = int1 + int2;
+            let answer;
+
+            while (true) {
+                answer = parseInt(prompt("What is " + int1 + " + " + int2 + "?"));
+                if (answer === correctAnswer) {
+                    alert("You answered correctly!");
+                    break;
+                } else {
+                    alert("You answered incorrectly! Try again.");
+                }
+            }
+
+            if (confirm("Would you like to continue?")) {
+                startq();
+            } else {
+                alert("Goodbye and thank you for playing!");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

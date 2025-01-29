@@ -7,66 +7,71 @@ This web page is to show information about me.
 
 <head>
     <meta charset="utf-8">
-    <title>Yusuf Khan</title>
+    <title>About Me</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
 </head>
 
 <body>
     <div id="container">
+        <!-- Navbar Section -->
         <div id="navbar">
             <a class="navlink" href="index.html">Home</a>
             <a class="navlink" href="about.html">About Me</a>
             <a class="navlink" href="work.html">My Work</a>
             <a class="navlink" href="journal.html">My Journal</a>
         </div>
-        <div id="header">
-            <h1>Yusuf Khan</h1>
+
+        <!-- Header Section -->
+        <div class="header">
+            <h1>About Me</h1>
         </div>
+
+        <!-- Content Section -->
         <div id="content">
-            <div id="intro">
-                <div id="introtext">
-                    <p>Hello! Welcome to my about me page!</p>
-                    <p>In this page you will learn about me, such as my hobbies, personal projects among others!</p>
-                </div>
-                <div id="introimg">
-                    <img src="images/me.jpg">
+            <!-- Introduction Section -->
+            <div class="fullscreentile">
+                <div class="infotile">
+                    <img src="images/me.jpg" alt="Picture of me">
+                    <div class="infotext">
+                        <h1>Hello! Welcome to my about me page!</h1>
+                        <h2>In this page, you will learn about me, such as my hobbies, personal projects, and more!</h2>
+                    </div>
                 </div>
             </div>
-            <div id="entries">
-                <h2>My Hobbies</h2>
-                <ul>
-                    <div class="textimg">
-                        <div id="hobbytext">
-                            <li><strong>Biking</strong></li>
-                            <p>I enjoy biking from time to time when the weather allows it. It helps me clear my head and is
-                                a good exercise!<br><br></p>
-                        </div>
-                        <img src="images/biking.png"></img>
-                    </div>
 
-                    <div class="textimg">
-                        <div id="hobbytext">
-                            <li><strong>Video Games</strong></li>
-                            <p>Some of my favorite games that I enjoy playing are Elden Ring, Geometry Dash, League of
-                                Legends, Valorant, and Minecraft.</p>
-                        </div>
-                        <img src="images/game.jpg"></img>
+            <div class="title">My Hobbies</div>
+            <div class="fullscreentile">
+                <div class="infotile">
+                    <img src="images/biking.png" alt="Biking">
+                    <div class="infotext">
+                        <h2>Biking</h2>
+                        <p>I enjoy biking from time to time when the weather allows it. It helps me clear my head
+                            and is a good exercise!</p>
                     </div>
-                    
-                    <div class="textimg">
-                        <div id="hobbytext">
-                            <li><strong>Working out</strong></li>
-                            <p>Another one of my hobbies is working out as it keeps me healthy and I also find it fun to throw around weights.
-                        </div>
-                        <img src="images/weights.jpg"></img>
+                </div>
+                <div class="infotile">
+                    <img src="images/game.jpg" alt="Video Games">
+                    <div class="infotext">
+                        <h2>Video Games</h2>
+                        <p>Some of my favorite games that I enjoy playing are Elden Ring, Geometry Dash, League of
+                            Legends, Valorant, and Minecraft.</p>
                     </div>
-
-                </ul>
+                </div>
+                <div class="infotile">
+                    <img src="images/weights.jpg" alt="Working Out">
+                    <div class="infotext">
+                        <h2>Working Out</h2>
+                        <p>Another one of my hobbies is working out as it keeps me healthy, and I also find it fun
+                            to throw around weights.</p>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Footer Section -->
         <div id="footer">&copy;Yusuf Khan, McMaster University, 2025</div>
     </div>
-
 </body>
 
 </html>
