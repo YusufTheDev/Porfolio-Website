@@ -75,6 +75,10 @@ a {
     margin: 20px;
 }
 
+.widget h2{
+    font-size: 20px;
+}
+
 .widget img {
     width: 80%;
     height: auto;
@@ -125,6 +129,10 @@ a {
         height: 33%;
         width: auto;
         margin: 5px;
+    }
+
+    .widget h2{
+        font-size: 17px;
     }
 
     .widget img {
@@ -190,6 +198,10 @@ a {
         height: 60%;
     }
 
+    .widgetgroup{
+        width: 100%;
+    }
+
     .widget {
         align-items: center;
         justify-content: flex-start;
@@ -197,12 +209,17 @@ a {
         flex-direction: row;
         gap: 10px;
     }
-
+    .widget a{
+        font-size: 15px;
+    }
     .widgetimg {
-        width: 50%;
         display: flex;
         justify-content: left;
         align-items: center;
+    }
+
+    .widget img{
+        width:50%;
     }
 
     .widgettext {
