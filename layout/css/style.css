@@ -1,20 +1,33 @@
 /*
+Yusuf Khan 400565596
+Feb 02, 2025
 CSS for Web layout assignment
 */
 body {
     width: 100%;
     background-color: #bde0fe;
-    justify-content: space-around;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0;
     min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
-.image2{
-    display:none;
+a {
+    font-size: 18px;
+}
+
+#header a {
+    font-size: 25px;
+}
+
+#header p {
+    font-size: 20px;
+}
+
+.image2 {
+    display: none;
 }
 
 #container {
@@ -26,7 +39,7 @@ body {
     align-items: center;
 }
 
-#w4 {
+.w4 {
     display: block;
 }
 
@@ -68,7 +81,6 @@ body {
 }
 
 @media (max-width: 1024px) {
-
     #container {
         flex-direction: column;
     }
@@ -76,6 +88,14 @@ body {
     #header {
         height: 25%;
         width: 100%;
+    }
+
+    #header a {
+        font-size: 25px;
+    }
+
+    #header p {
+        font-size: 20px;
     }
 
     #headerwidget {
@@ -103,7 +123,7 @@ body {
 
     .widget {
         height: 33%;
-        width:auto;
+        width: auto;
         margin: 5px;
     }
 
@@ -113,19 +133,18 @@ body {
         height: 50%;
     }
 
-    #w4 {
+    .w4 {
         display: none;
     }
 }
 
-@media (max-device-width: 480px) {
-
+@media (max-width: 480px) {
     body {
         background-color: #99d98c;
         color: white;
     }
 
-    #w4 {
+    .w4 {
         display: flex;
     }
 
@@ -139,7 +158,7 @@ body {
 
     .image2 {
         display: block;
-        width: 100%;  /* Adjust as needed */
+        width: 100%;
         height: auto;
     }
 
@@ -149,6 +168,14 @@ body {
 
     #header {
         height: 40%;
+    }
+
+    #header a {
+        font-size: 22px;
+    }
+
+    #header p {
+        font-size: 18px;
     }
 
     #header .widgetimg {
@@ -164,25 +191,24 @@ body {
     }
 
     .widget {
-        align-items: center;         
+        align-items: center;
         justify-content: flex-start;
         height: 25%;
-        flex-direction: row;      
-        gap: 10px;                
+        flex-direction: row;
+        gap: 10px;
     }
 
     .widgetimg {
         width: 50%;
-        justify-content: center;     
-        align-items: center;     
+        display: flex;
+        justify-content: left;
+        align-items: center;
     }
 
     .widgettext {
         width: 50%;
-        flex-direction: column;    
-        justify-content: center;    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
-
-
-
