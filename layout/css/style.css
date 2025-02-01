@@ -1,0 +1,188 @@
+/*
+CSS for Web layout assignment
+*/
+body {
+    width: 100%;
+    background-color: #bde0fe;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.image2{
+    display:none;
+}
+
+#container {
+    padding: 2%;
+    display: flex;
+    width: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #a2d2ff;
+    align-items: center;
+}
+
+#w4 {
+    display: block;
+}
+
+#header {
+    width: 25%;
+}
+
+#header img {
+    width: 80%;
+}
+
+#headerwidget {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.widgetgroup {
+    display: flex;
+    width: 100%;
+}
+
+.widget {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin: 20px;
+}
+
+.widget img {
+    width: 80%;
+    height: auto;
+}
+
+@media (max-width: 1024px) {
+
+    #container {
+        flex-direction: column;
+    }
+
+    #header {
+        height: 25%;
+        width: 100%;
+    }
+
+    #headerwidget {
+        flex-direction: row;
+    }
+
+    #header .widgetimg {
+        width: 50%;
+    }
+
+    #header .widgettext {
+        width: 50%;
+    }
+
+    #content {
+        flex-direction: row;
+        height: 75%;
+    }
+
+    .widgetgroup {
+        flex-direction: column;
+        height: 100%;
+        width: 50%;
+    }
+
+    .widget {
+        height: 33%;
+        width:auto;
+        margin: 5px;
+    }
+
+    .widget img {
+        width: 100%;
+        max-width: 200px;
+        height: 50%;
+    }
+
+    #w4 {
+        display: none;
+    }
+}
+
+@media (max-device-width: 480px) {
+
+    body {
+        background-color: #99d98c;
+        color: white;
+    }
+
+    #w4 {
+        display: flex;
+    }
+
+    #wg2 {
+        display: none;
+    }
+
+    .image1 {
+        display: none;
+    }
+
+    .image2 {
+        display: block;
+        width: 100%;  /* Adjust as needed */
+        height: auto;
+    }
+
+    #container {
+        background-color: #76c893;
+    }
+
+    #header {
+        height: 40%;
+    }
+
+    #header .widgetimg {
+        width: 40%;
+    }
+
+    #header .widgettext {
+        width: 60%;
+    }
+
+    #content {
+        height: 60%;
+    }
+
+    .widget {
+        align-items: center;         
+        justify-content: flex-start;
+        height: 25%;
+        flex-direction: row;      
+        gap: 10px;                
+    }
+
+    .widgetimg {
+        width: 50%;
+        justify-content: center;     
+        align-items: center;     
+    }
+
+    .widgettext {
+        width: 50%;
+        flex-direction: column;    
+        justify-content: center;    
+    }
+}
+
+
+
