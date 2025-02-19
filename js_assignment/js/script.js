@@ -79,7 +79,7 @@ window.addEventListener("load", function (event) {
     }
 
     //initialize input values with localStorage or default values if no localStorage
-    let playerName = localStorage.getItem("playerName") || "";
+    let playerName = localStorage.getItem("playerName") || "Player";
     let playerAge = localStorage.getItem("playerAge") || "";
     let color1Hex = localStorage.getItem("color1Hex") || "#000000";
     let color2Hex = localStorage.getItem("color2Hex") || "#87CEFA";
