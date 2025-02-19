@@ -1,0 +1,185 @@
+/*
+Yusuf Khan 400565596
+Feb 25, 2025
+CSS for Javascript Assignment
+*/
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  text-align: center;
+  padding: 20px;
+}
+
+img {
+  width: 50%;
+}
+
+#intro-page,
+#game-page {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+#leaderboard {
+  border: 2px solid #000;
+  padding: 10px;
+  margin: 20px 0;
+  text-align: center;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+#leaderboard h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+#leaderboard div {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+input {
+  display: block;
+  width: 90%;
+  padding: 10px;
+  margin: 10px auto;
+  font-size: 16px;
+}
+
+input[type="color"] {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+}
+
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 15px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#instructions {
+  display: none;
+  background-color: #e7f3ff;
+  padding: 10px;
+  margin: 10px 0;
+  border-left: 4px solid #007BFF;
+}
+
+#game-content {
+  font-size: 1vh;
+}
+
+#score-board {
+  display: flex;
+  justify-content: space-around;
+}
+
+#game-board {
+  font-size: 2vh;
+}
+
+
+.draw {
+  display: none;
+}
+
+#player-draw,
+#computer-draw {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#computer-draw-card {
+  width: 30%;
+  height: 30%;
+}
+
+#player-draw-card {
+  width: 30%;
+  height: 30%;
+}
+
+#computer-draw-choices,
+#player-draw-choices {
+  display: none;
+  justify-content: space-around;
+}
+
+#computer-draw-choices img,
+#player-draw-choices img {
+  width: 25%;
+}
+
+#end-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+@media (max-width: 500px) {
+  button {
+    padding: 8px 16px;
+    font-size: 13px;
+    border-radius: 4px;
+  }
+
+  #intro-page h1 {
+    font-size: 6vw;
+  }
+
+  #welcome-message {
+    font-size: 6vw;
+  }
+
+  #info-text,
+  #player-results,
+  #computer-results {
+    font-size: 3.5vw;
+  }
+
+  #computer-draw-card {
+    width: 25%;
+    height: 25%;
+  }
+
+  #player-draw-card {
+    width: 25%;
+    height: 25%;
+  }
+
+  #computer-draw #stack {
+    width: 40%;
+    height: 40%;
+  }
+
+  #player-draw #stack {
+    width: 40%;
+    height: 40%;
+  }
+
+
+}

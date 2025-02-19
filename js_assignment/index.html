@@ -1,0 +1,112 @@
+<!--
+Yusuf Khan 400565596
+Feb 24, 2025
+Javascript Assignment html page
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript War!</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="intro-page">
+        <h1>Welcome to Javascript War!</h1>
+
+        <div id="leaderboard">
+            <h2>Leaderboard</h2>
+            <div id="player-record">Player Wins: 0</div>
+            <div id="computer-record">Computer Wins: 0</div>
+        </div>
+
+        <form id="player-form">
+            <input type="text" id="player-name" placeholder="Enter your name" required>
+            <input type="number" id="player-age" placeholder="Enter your age" required>
+            <p>Select your favorite colors:</p>
+            <input type="color" id="player-color-1" value="#000000" required>
+            <input type="color" id="player-color-2" value="#87CEFA" required>
+            <button type="submit">Start Game</button>
+        </form>
+    </div>
+
+    <div id="game-page" style="display: none;">
+        <h1 id="welcome-message"></h1>
+        <button id="help-button">Help</button>
+        <div id="instructions">
+            <h2>Instructions: </h2>
+            <p>
+                The game is played between you (the player) and the computer. In each round, both you and the computer
+                draw a card from your respective decks. The player with the higher card wins the round and earns a
+                point.
+            </p>
+            <p>
+                <strong>Special Tie Rule:</strong> If both players draw the same card, it results in a "war." In this
+                case, both you and the computer will each select one of three new cards. The player with the highest
+                card from the three chosen will win all the points from the round (1 point + 3 points for the war).
+            </p>
+            <p>
+                If another tie occurs during the war, all cards from that round are discarded, and no points will be
+                awarded.
+            </p>
+            <p>
+                The game continues for several rounds, and at the end, the player with the most points wins the game.
+                Good luck!
+            </p>
+
+        </div>
+        <div id="game-content">
+            <div id="score-board">
+                <h1>Your Score: </h1>
+                <div id="player-score"></div>
+                <h1>Enemy Score: </h1>
+                <div id="computer-score"></div>
+            </div>
+            <div id="game-board">
+                <div id="computer-side">
+                    <div id="computer-results">
+                    </div>
+                    <div id="computer-draw">
+                        <img id="stack" src="images/enemycards.png">
+                        <img id="computer-draw-card">
+                    </div>
+                    <div id="computer-draw-choices">
+                        <img id="computer-choice-1" src="images/enemytiecard.png">
+                        <img id="computer-choice-2" src="images/enemytiecard.png">
+                        <img id="computer-choice-3" src="images/enemytiecard.png">
+                    </div>
+
+                </div>
+                <div id="info-text"></div>
+                <button id="draw-card">Draw Card</button>
+                <div id="player-side">
+                    <div id="player-results">
+                    </div>
+                    <div id="player-draw">
+                        <img id="stack" src="images/playercards.png">
+                        <img id="player-draw-card">
+                    </div>
+                    <div id="player-draw-choices">
+                        <img id="player-choice-1" src="images/playertiecard.png">
+                        <img id="player-choice-2" src="images/playertiecard.png">
+                        <img id="player-choice-3" src="images/playertiecard.png">
+                    </div>
+                </div>
+            </div>
+            <div id="end-buttons">
+                <button id="play-again" style="display: none;">Play Again</button>
+                <button id="quit">Quit</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="js/script.js">
+    </script>
+</body>
+
+</html>
