@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+Example Canvas Animation with a Ball class
+Sam Scott, McMaster, 2024
+-->
+<html>
+
+<head>
+    <title>Example Canvas Animation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <script>
+        class Ball {
+            constructor(x, y, xSpeed, ySpeed, red, green, blue) {
+                this.x = x;
+                this.y = y;
+                this.xSpeed = xSpeed;
+                this.ySpeed = ySpeed;
+                this.red = red;
+                this.green = green;
+                this.blue = blue;
+                this.radius = 5;
+            }
+
+            moveOneStep(canvas) {
+                this.x += this.xSpeed;
+                this.y += this.ySpeed;
+
+                // Bounce off walls by reversing speed when hitting boundaries
+                if (this.x + this.radius >= canvas.width || this.x - this.radius <= 0) {
+                    this.xSpeed = -this.xSpeed;
+                }
+                if (this.y + this.radius >= canvas.height || this.y - this.radius <= 0) {
+                    this.ySpeed = -this.ySpeed;
+                }
+            }
+
+            draw(ctx) {
+                ctx.fillStyle = `rgb(${this.red}, ${this.green}, ${this.blue})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.closePath();
+                ctx.fill();
+            }
+        }
+
+        window.addEventListener("load", function () {
+            let balls = [];
+            let c = document.getElementById("animationCanvas");
+            let ctx = c.getContext("2d");
+
+            let centerX = c.width / 2;
+            let centerY = c.height / 2;
+            let spawnRange = 100; // Constrain spawning to center 100px
+
+            for (let i = 0; i < 500; i++) {
+                let randomX = centerX + (Math.random() * spawnRange - spawnRange / 2);
+                let randomY = centerY + (Math.random() * spawnRange - spawnRange / 2);
+                let randomXSpeed = (Math.random() * 10 - 5); // Speed range: -5 to 5
+                let randomYSpeed = (Math.random() * 10 - 5);
+                let randomR = Math.random() * 255;
+                let randomG = Math.random() * 255;
+                let randomB = Math.random() * 255;
+
+                let ball = new Ball(randomX, randomY, randomXSpeed, randomYSpeed, randomR, randomG, randomB);
+                balls.push(ball);
+            }
+
+            function updateAnimation() {
+                ctx.clearRect(0, 0, c.width, c.height);
+
+                balls.forEach(ball => {
+                    ball.moveOneStep(c);
+                    ball.draw(ctx);
+                });
+            }
+
+            // Run update every 16 milliseconds (~60 FPS)
+            setInterval(updateAnimation, 16);
+        });
+    </script>
+</head>
+
+<body style='text-align:center;'>
+    <canvas id='animationCanvas' width='768' height='400' style='background-color:black;'></canvas>
+</body>
+
+</html>

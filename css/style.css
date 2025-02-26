@@ -146,6 +146,12 @@ body {
 
         width: 80%;
     }
+    
+}
+
+#vimg {
+    max-width: 40%;
+    height: auto;
 }
 
 .infotext {
