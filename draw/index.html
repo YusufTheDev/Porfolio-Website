@@ -1,0 +1,57 @@
+<!doctype html>
+<!--
+Yusuf Khan 400565596
+Shouheng Fu 400590015
+Mar 09, 2025
+Canvas Assignment html page
+-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Canvas Assignment</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Draw Here!</h1>
+
+    <div id="content">
+        <div id="selectors">
+            <div id="shapeselector">
+                <label for="shape">Shape:</label>
+                <select id="shape">
+                    <option value="circle">Circle</option>
+                    <option value="square">Square</option>
+                    <option value="triangle">Triangle</option>
+                    <option value="pencil">Pencil</option>
+                    <option value="meme">???</option>
+                </select>
+            </div>
+            <div id="sizeselector">
+                <label for="size">Size:</label>
+                <input type="number" id="size" value="50">
+            </div>
+            <div id="colorselector">
+                <label for="color">Color:</label>
+                <input type="color" id="color" value="#ff0000">
+                <div id="colorPreview"></div>
+            </div>
+        </div>
+        <canvas id="canvas" width="700" height="500"></canvas>
+        <div id="buttons">
+            <button id="clearButton">Clear</button>
+            <button id="helpButton">Help</button>
+            <button id="undoButton">Undo</button>
+        </div>
+    </div>
+    <div id="helptext">
+        <p>Click on the canvas to draw shapes at the position of your mouse. Use the selectors to change the shape,
+            size, and color of the shapes. Click the Clear button to clear the canvas. Click the Undo button to undo
+            the last shape drawn.</p>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
