@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        #error-message {
+            color: #dc3545;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="email"], 
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <form action="tip.php" id="tipform" method="post">
+        <label for="name">Server Name:</label>
+        <input type="text" name="name" id="name" required>
+        
+        <label for="bill">Bill Amount:</label>
+        <input type="number" name="bill" id="bill" step="0.01" min="0" required>
+        
+        <label for="emailaddress">Email Address:</label>
+        <input type="email" name="emailaddress" id="emailaddress" required>
+        
+        <label for="confirmemailaddress">Confirm Email Address:</label>
+        <input type="email" name="confirmemailaddress" id="confirmemailaddress" required>
+        
+        <label for="tip">Tip Percentage:</label>
+        <input type="number" name="tip" id="tip" min="0" required>
+        
+        <label for="creditcard">Credit Card Number:</label>
+        <input type ="password" name="creditcard" id="creditcard" required>
+        <div id="error-message" class="error-message"></div>
+        <input type="submit" id="submit" value="Calculate Tip">
+    </form>
+    <script src="js/script.js"></script>
+</body>
+</html>
