@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Search</title>
+</head>
+<body>
+    <h1>Search Cities by Population</h1>
+
+    <form id="search-form">
+        <label for="min_population">Min Population:</label>
+        <input type="number" id="min_population" min="0" value="1000000">
+
+        <label for="max_population">Max Population:</label>
+        <input type="number" id="max_population" min="0" value="10000000">
+
+        <button type="submit">Search</button>
+    </form>
+
+    <h2 id="summary">Results</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Country Code</th>
+                <th>Population</th>
+            </tr>
+        </thead>
+        <tbody id="results">
+            <!-- Data will be inserted here dynamically -->
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
